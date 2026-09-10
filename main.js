@@ -115,17 +115,25 @@ if (form) {
     e.preventDefault();
     const isEn = document.documentElement.lang === 'en';
     const btn = form.querySelector('button[type="submit"]');
+    
+    const nameVal = form.querySelector('input[name="name"]')?.value || '';
+    const phoneVal = form.querySelector('input[name="phone"]')?.value || '';
+    const interestVal = form.querySelector('select[name="interest"]')?.value || '';
+    
     btn.innerHTML = isEn ? '<span>Request Submitted ✓</span>' : '<span>Заявка отправлена ✓</span>';
     btn.style.background = '#2d7a46';
     btn.style.borderColor = '#2d7a46';
     btn.style.pointerEvents = 'none';
     
-    // Отправка данных на сервер
+    // Отправка реальных данных: имя, телефон, и интерес как детали
     sendLeadData({
       name: nameVal,
       phone: phoneVal,
-      source: isEn ? 'Footer Form (Contacts)' : 'Форма в подвале (Контакты)'
+      lotDetails: interestVal ? `Интерес: ${interestVal}` : '',
+      source: isEn ? 'Footer Form (Contacts)' : 'Форма из подвала (Контакты)'
     });
+
+    
 
     setTimeout(() => {
       btn.innerHTML = isEn 
