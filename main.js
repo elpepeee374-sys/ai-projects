@@ -129,7 +129,7 @@ if (form) {
     sendLeadData({
       name: nameVal,
       phone: phoneVal,
-      lotDetails: interestVal ? `Интерес: ${interestVal}` : '',
+      lot_details: interestVal ? `Интерес: ${interestVal}` : '',
       source: isEn ? 'Footer Form (Contacts)' : 'Форма из подвала (Контакты)'
     });
 
