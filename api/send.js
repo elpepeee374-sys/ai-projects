@@ -10,8 +10,15 @@ function escapeHtml(text) {
 }
 
 export default async function handler(req, res) {
-  // Set CORS headers
-  res.setHeader('Access-Control-Allow-Origin', '*');
+  // Set Strict CORS headers
+  const allowedOrigins = ['https://cyprus-elite.com', 'https://www.cyprus-elite.com', 'http://localhost:8080'];
+  const origin = req.headers.origin;
+  
+  if (origin && allowedOrigins.includes(origin)) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+  } else {
+    res.setHeader('Access-Control-Allow-Origin', 'https://www.cyprus-elite.com');
+  }
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   res.setHeader('Content-Type', 'application/json; charset=UTF-8');
 
@@ -21,6 +28,12 @@ export default async function handler(req, res) {
 
   try {
     const data = req.body;
+    
+    // Honeypot check (bot trap)
+    if (data && data.website) {
+      console.log('Bot detected via honeypot');
+      return res.status(200).json({ status: 'success', message: 'Lead data processed.' });
+    }
     if (!data || !data.phone) {
       return res.status(400).json({ status: 'error', message: 'Phone number is required.' });
     }

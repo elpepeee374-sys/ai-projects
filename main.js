@@ -1,5 +1,12 @@
 // ===== LEAD SENDING UTILITY (Telegram & Email) =====
 async function sendLeadData(data) {
+  const honeypots = document.querySelectorAll('input[name="website"]');
+  for (let hp of honeypots) {
+    if (hp.value) {
+      data.website = hp.value;
+      break;
+    }
+  }
   data.lang = document.documentElement.lang === 'en' ? 'en' : 'ru';
   console.log('Sending lead data:', data);
   try {

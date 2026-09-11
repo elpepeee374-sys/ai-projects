@@ -1,0 +1,21 @@
+﻿
+C:\Users\Astion\.gemini\antigravity\brain\9cae0f0e-fd2a-4815-a117-2048f8cd59e0\.system_generated\logs\transcript.jsonl:
+920:{"step_index":942,"source":"USER_EXPLICIT","type":"USER_INPUT","status":"DONE","created_at":"2026-09-10T17:15:47Z",
+"content":"<USER_REQUEST>\nзадача теперь прицепить нвоый домен платный к сайту. домен взяли на godaddy.com . про версел
+ь хостинг ты вкурсе уже. что делать ? \n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-09-10T2
+0:15:47+03:00.\n\nThe user has uploaded 2 image(s):\n- C:/Users/Astion/.gemini/antigravity/brain/9cae0f0e-fd2a-4815-a11
+7-2048f8cd59e0/.user_uploaded/media_1789060531829.jpg\n- C:/Users/Astion/.gemini/antigravity/brain/9cae0f0e-fd2a-4815-a
+117-2048f8cd59e0/.user_uploaded/media_1789060531834.jpg\nYou can embed these images in an artifact if you need the USER
+ to review them.\n</ADDITIONAL_METADATA>"}
+C:\Users\Astion\.gemini\antigravity\brain\9cae0f0e-fd2a-4815-a117-2048f8cd59e0\.system_generated\logs\transcript.jsonl:
+1027:{"step_index":1049,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"2026-09-10T21:10:13Z",
+"thinking":"**Recalling Previous Events**\n\nI'm focusing on the events *preceding* the Git Revert. My context summary 
+mentions accidentally committing KIPR files. I believe I have the context of that event, and am trying to remember all 
+that happened. I think I will list the steps of my procedure from memory.\n\n\n","tool_calls":[{"name":"run_command","a
+rgs":{"CommandLine":"\"Select-String -Path \\\"C:\\\\Users\\\\Astion\\\\.gemini\\\\antigravity\\\\brain\\\\9cae0f0e-fd2
+a-4815-a117-2048f8cd59e0\\\\.system_generated\\\\logs\\\\transcript.jsonl\\\" -Pattern \\\"USER_INPUT\\\" | Select-Stri
+ng -Pattern \\\"домен взяли\\\" -Context 0,30 | Out-File -Encoding utf8 \\\"temp_log.txt\\\"; cat temp_log.txt\"","Cwd"
+:"\"d:\\\\For programs\\\\Google Antigravity Files\\\\Folders\\\\KIPR-versions\\\\KIPR-NEW1\\\\project\"","WaitMsBefore
+Async":"5000","toolAction":"\"Поиск запроса про домен\"","toolSummary":"\"Поиск запроса про домен\""}}]}
+
+
